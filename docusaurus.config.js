@@ -6,11 +6,11 @@ module.exports = {
   title: 'Nocalhost',
   tagline: 'Dinosaurs are cool',
   url: 'https://neaped.github.io',
-  baseUrl: '/',
+  baseUrl: '/nh-docs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'Nocalhost', // Usually your GitHub org/user name.
+  organizationName: 'neaped', // Usually your GitHub org/user name.
   projectName: 'nh-docs', // Usually your repo name.
   themeConfig: {
     navbar: {
