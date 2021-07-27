@@ -19,7 +19,6 @@ module.exports = {
   ],
   // Plugins
   plugins: [
-    'docusaurus-plugin-sass',
     'plugin-image-zoom',
   ],
   themeConfig: {
@@ -135,7 +134,7 @@ module.exports = {
         },
         // Theme
         theme: {
-          customCss: require.resolve('./src/css/custom.scss'),
+          customCss: require.resolve('./src/css/custom.css'),
         },
       },
     ],
