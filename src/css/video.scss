@@ -1,0 +1,25 @@
+/**
+* Video page stylesheet
+*/
+
+/** Video Section **/
+.video-section {
+}
+
+/** Video Cards **/
+.video-card {
+    background-color: var(--ifm-card-background-color);
+    border-radius: var(--ifm-card-border-radius);
+    box-shadow: var(--ifm-global-shadow-lw);
+    display: flex;
+    flex-direction: column;
+}
+
+.card__body > p {
+    font-size: 13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
+}

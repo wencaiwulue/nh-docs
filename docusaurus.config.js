@@ -4,7 +4,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: 'Nocalhost',
-  tagline: 'Dinosaurs are cool',
+  tagline: 'Nocalhost is an open-source toolsets help to build cloud-native applications easier and faster',
   url: 'https://neaped.github.io',
   baseUrl: '/nh-docs/',
   onBrokenLinks: 'throw',
@@ -12,25 +12,58 @@ module.exports = {
   favicon: 'img/favicon.ico',
   organizationName: 'neaped', // Usually your GitHub org/user name.
   projectName: 'nh-docs', // Usually your repo name.
+  // i18n Configurations
+  // Stylesheets
+  stylesheets: [
+    "https://fonts.googleapis.com/icon?family=Material+Icons",
+  ],
+  // Plugins
+  plugins: [
+    'docusaurus-plugin-sass',
+    'plugin-image-zoom',
+  ],
   themeConfig: {
+    // Search
+    algolia: {
+      apiKey: 'a20f9e4540c8e520a806eae92c33cdd5',
+      indexName: 'nocalhost',
+    },
+    // Navbar
     navbar: {
-      title: 'My Site',
+      title: 'Nocalhost',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: 'Most productive cloud-native development toolsets',
+        src: 'img/logo.png',
       },
       items: [
+        // Documentations
         {
           type: 'doc',
-          docId: 'intro',
+          docId: 'quick-start',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Docs',
         },
+        // Video
+        {to: '/videos', label: 'Videos', position: 'left'},
+        // Blog
         {to: '/blog', label: 'Blog', position: 'left'},
+        // Version
         {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
+          type: 'docsVersionDropdown',
           position: 'right',
+          dropdownItemsAfter: [{to: '/versions', label: 'All Versions'}],
+        },
+        // Language
+        {
+          type: 'localeDropdown',
+          position: 'right'
+        },
+        // Github Icon
+        {
+          href: 'https://github.com/nocalhost/nocalhost',
+          // label: 'GitHub',
+          position: 'right',
+          className: 'header-github-link',
         },
       ],
     },
@@ -41,8 +74,8 @@ module.exports = {
           title: 'Docs',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: 'Getting Started',
+              to: '/docs/quick-start',
             },
           ],
         },
@@ -88,20 +121,21 @@ module.exports = {
     [
       '@docusaurus/preset-classic',
       {
+        // Docs
         docs: {
+          path: 'docs',
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
+          editUrl: 'https://github.com/neaped/nocal-docs-docusaurus/tree/dev',
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
         },
+        // Blog
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
         },
+        // Theme
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve('./src/css/custom.scss'),
         },
       },
     ],
