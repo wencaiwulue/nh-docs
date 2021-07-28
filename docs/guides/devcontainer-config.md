@@ -21,7 +21,7 @@ However, it is strongly recommended to provide a dedicated `DevContainer Image` 
 
 ## Nocalhost's DevContainer Image
 
-Can download from [DevContainer Image](https://github.com/nocalhost/dev-container).
+We provides some standard `DevContainer Image`, you can download from this [Github Repo](https://github.com/nocalhost/dev-container).
 
 ## How to Configure DevContainer
 

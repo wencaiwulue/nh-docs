@@ -29,7 +29,6 @@ module.exports = {
       items: [
         'concepts/intro',
         'concepts/architecture',
-        'concepts/how-it-works'
       ]
     },
     // Guides

@@ -1,6 +1,10 @@
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Architecture
+# Architecture and Core Concepts
+
+In this documentation, we will explain the core idea of Nocalhost and clarify some technical terms that are widely used in the project.
+
+## Architecture
 
 The overall working diagram of Nocalhost is as follows:
 
@@ -43,3 +47,28 @@ Nocalhost manages serviceAccount, namespace and application in kubernetes cluste
 * When applications deployed, nocalhost-dep will inject InitContainers into the workload automatically. According to declared dependencies, nocalhost-dep keeps waiting for the dependent services's availability. 
 
 * Once all dependent service become available, the InitContainer exits, then the containers which container business logics start. There is no restarting, which means minimal time waiting of starting.
+
+## Core Concepts
+
+### DevMode
+
+**DevMode** refers to a **state** corresponding to the microservice workload when the developer uses Nocalhost for microservice development. In this state, the workload will be converted into a mode that can easily support developers to develop debugging programs.
+
+In the existing Nocalhost development environment that based on Kubernetes, the main changes in DevMode are as follows:
+
+* The number of copies of the workload will be adjusted to 1
+* The Pod's health check will be disabled (it is convenient to keep trying to restart the process for debugging during the development)
+* Pod container will be replaced with [DevContainer](#devcontainer)
+* SecurityContext will be disabled
+* A Nocalhost-Sidecar container will be injected into Pod, in order to support remote file synchronization 
+* Pod will be added with a Volume to support file sharing between DevContainer and Nocalhost-Sidecar
+
+### DevContainer
+
+**DevContainer** is a basic environment for users to support the development and debugging of a specify microservice component. This environment is packaged into a container, which often contains a full set of SDKs , development and debugging tools, and other tools for developing this microservice component. When the service workload is switched to [DevMode](#devmode), Nocalhost will use **DevContainer** to replace the original workload container.
+
+**DevContainer's** life cycle runs through the entire development and debugging process, it created when DevMode starts. During the life cycle, local source code changes will be automatically synchronized to **DevContainer**, and can be directly compiled and deployed in the container.
+
+#### DevContainer Configuration
+
+Read [Configure DevContainer](../guides/devcontainer-config)。

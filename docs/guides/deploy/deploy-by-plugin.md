@@ -4,9 +4,9 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 # Deploy by IDE Plugin
 
-:::caution Configuration Needed
-You need to have application configuration in your `.nocalhost` folder in your application source code directory. Refer to [Nocalhost Configuration](../nocalhost-config) to 
-:::
+## Prerequisites
+
+You need to have application configuration in your `.nocalhost` folder in your application source directory. Refer to [Nocalhost Configuration](../nocalhost-config) for more details.
 
 ## Select the Installation Source
 
@@ -19,7 +19,6 @@ You need to have application configuration in your `.nocalhost` folder in your a
   <figcaption>Select the installation source</figcaption>
 </figure>
 
-Nocalhost supports to 
 
 
 When you deploy an application by Nocalhost IDE plugin, Nocalhost will analyze the deployment configuration in the `.nocalhost` folder in your application directory, looking for clues on how to deploy your application.

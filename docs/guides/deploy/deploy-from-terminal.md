@@ -1,4 +1,4 @@
-# Deploy from Terminal by using nhctl
+# Deploy from Terminal by nhctl
 
 Nocalhost supports to use the following types to install application:
 
