@@ -155,5 +155,13 @@ module.exports = {
     },
     // FAQ
     'faq/faq',
+    // Changelogs
+    { 
+      type: 'category',
+      label: 'Changelogs',
+      items: [
+        'changelogs/0.4.x'
+      ]
+    }
   ]
 };

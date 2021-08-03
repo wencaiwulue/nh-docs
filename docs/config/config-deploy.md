@@ -25,7 +25,7 @@ name: foo-app
 
 ## Configure Application Type
 
-Nocalhost will use the `manifestType` property to deploy and upgrade applications.
+Nocalhost will use the `manifestType` property to deploy applications.
 
 **Default Value:** null
 
@@ -58,8 +58,11 @@ Set application source path, all files in this path will be sync to remote conta
 
 :::note
 This is the source path configuration for application level,
+:::
   
-### `application[*].ignoredPath`
+### 
+
+`application[*].ignoredPath`
 
 ### `application[*].onPreInstall`
 
