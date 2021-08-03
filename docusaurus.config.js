@@ -124,7 +124,7 @@ module.exports = {
         docs: {
           path: 'docs',
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/neaped/nocal-docs-docusaurus/tree/dev',
+          editUrl: 'https://github.com/neaped/nh-docs/',
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
         },
