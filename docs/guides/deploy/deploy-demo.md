@@ -1,6 +1,6 @@
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Deploy Quick Demo
+# Deploy Demo Application
 
 Nocalhost IDE plugin has built-in demo application, you can quickly install it through the following steps:
 

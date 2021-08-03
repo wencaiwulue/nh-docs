@@ -1,1 +1,1 @@
-# Debugging Java Application
+# Java Application

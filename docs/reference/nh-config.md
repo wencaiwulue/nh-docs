@@ -73,22 +73,22 @@ application:
     # Job yaml file, the relative path of the repo root
     # type: string
     # required
-  - path: "job-1.yaml"
+    - path: "job-1.yaml"
 
-    # Job name
-    # type: string
-    # required
-    name: xxx-job
+      # Job name
+      # type: string
+      # required
+      name: xxx-job
 
-    # Order of execution of job, the smallest be executed firstly.
-    # type: integer
-    # default value: 0
-    # optional
-    priority: -1
+      # Order of execution of job, the smallest be executed firstly.
+      # type: integer
+      # default value: 0
+      # optional
+      priority: -1
 
-  - path: "job-2.yaml"
-    name: xxx2-job
-    priority: 5
+    - path: "job-2.yaml"
+      name: xxx2-job
+      priority: 5
 
   # Overwrite helm values.yaml
   # type: object[]

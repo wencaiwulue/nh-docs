@@ -44,4 +44,4 @@ containers:
       shell: bash
 ```
 
-When debugging, Nocalhost will overwrite the startup command of `DevContainer` to `/bin/sh -c tail -f /dev/null` to ensure that `DevContainer` will not exit unexpectedly. For other changes made by Nocalhost under **DevMode**, please refer to [DevMode](../concepts/how-it-works#devmode).
+When debugging, Nocalhost will overwrite the startup command of `DevContainer` to `/bin/sh -c tail -f /dev/null` to ensure that `DevContainer` will not exit unexpectedly. For other changes made by Nocalhost under **DevMode**, please refer to [DevMode](#).

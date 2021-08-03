@@ -1,1 +1,1 @@
-# Debugging GO Application
+# GO Application

@@ -5,9 +5,9 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 # Quick Start
 
 :::note About this guide
-**Goal**: 
-**Estimate time**: 5 minutes
-**Requirements**:
+**Goal :** Install Nocalhost, evaluate the core features and experience efficient cloud-native application development. <br />
+**Estimate time :** 5 minutes <br />
+**Requirements :**
 - Any local or remote Kubernetes cluster (minikube, kind, Docker Desktop, TKE, GKE, EKS, AKS, Rancher, ...). Allocate at least 4 GB of memory for single node clusters like [Docker Desktop](https://docs.docker.com/docker-for-mac/kubernetes/) and [minikube](https://minikube.sigs.k8s.io/docs/start/).
 - **RBAC** must be enabled in above cluster
 - **Configured kubeconfig file** that has namespace admin privilege
@@ -69,7 +69,7 @@ Nocalhost will try to load `KubeConfig` from your local `~/.kube/config` by defa
 You can use the following command to view your `KubeConfig` and copy it.
 
 ```bash
-kubectl config view -minify --raw --flattern
+kubectl config view --raw --flattern
 ```
 :::
 

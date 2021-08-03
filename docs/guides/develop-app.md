@@ -1,4 +1,4 @@
-# Develop Application on Kubernetes
+# Develop Application
 
 ## Choose Source Code Directory
 
@@ -10,6 +10,9 @@
 
 
 ### Automated File Synchronization
+
+
+### Status Bar
 
 
 ## Exit Development Mode

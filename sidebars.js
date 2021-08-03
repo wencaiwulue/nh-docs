@@ -11,6 +11,12 @@
 
 module.exports = {
   docs: [
+    // Intro
+    {
+      type: 'doc',
+      label: 'Introduction',
+      id: 'introduction'
+    },
     // Getting Start
     {
       type: 'category',
@@ -19,16 +25,6 @@ module.exports = {
       items: [
         'quick-start',
         'installation',
-      ]
-    },
-    // Main Concepts
-    {
-      type: 'category',
-      label: 'Main Concepts',
-      collapsed: false,
-      items: [
-        'concepts/intro',
-        'concepts/architecture',
       ]
     },
     // Guides
@@ -43,7 +39,7 @@ module.exports = {
           type: 'category',
           label: 'Deploy Application',
           items: [
-            'guides/deploy/deploy-by-plugin',
+            'guides/deploy/deploy-by-ide',
             'guides/deploy/deploy-from-helm',
             'guides/deploy/deploy-from-terminal',
             'guides/deploy/deploy-demo',
@@ -55,8 +51,38 @@ module.exports = {
         'guides/port-forward',
         'guides/app-enhance',
         'guides/service-config',
-        'guides/nocalhost-config',
         'guides/devcontainer-config',
+      ]
+    },
+    // Configurations
+    {
+      type: 'category',
+      label: 'Configuration',
+      collapsed: false,
+      items: [
+        'config/config-ref',
+        // Deployments
+        {
+          type: 'category',
+          label: 'deployments',
+          items: [
+            'config/config-deploy',
+            'config/config-deploy-helm',
+            'config/config-deploy-manifest',
+            'config/config-deploy-kustomize',
+          ]
+        },
+        // Development
+        {
+          type: 'category',
+          label: 'development',
+          items: [
+            'config/config-dev',
+            'config/config-dev-port',
+            'config/config-dev-sync',
+            'config/config-dev-devcontainer'
+          ]
+        },
       ]
     },
     // Best Practice
@@ -75,12 +101,13 @@ module.exports = {
             'practice/cloud/ali-ack',
             'practice/cloud/google-gke',
             'practice/cloud/amazon-eks',
+            'practice/cloud/ms-azure'
           ]
         },
         // Debug
         {
           type: 'category',
-          label: 'Debugging Applications',
+          label: 'Remote Debugging',
           items: [
             'practice/debug/php',
             'practice/debug/java',
